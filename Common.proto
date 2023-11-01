@@ -1,0 +1,11 @@
+syntax = "proto3";
+// pbjs -t static-module --wrap es6  --path admin_protobuf -o src/protobuf/request.js request.proto
+package Atable.Common;
+
+// 分页
+message page {
+    string query = 1;
+    int32 page = 2;
+    int32 limit = 3;
+  }
+  

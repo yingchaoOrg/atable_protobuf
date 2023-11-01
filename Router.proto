@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package Atable.Router;
+
+
+// 模块
+enum MODULE{
+    DEFAULT = 0;
+    // 登陆模块
+    LOGIN = 1;
+    // 消息
+    MES = 2;
+    // 用户
+    USER = 3;
+    // 表格操作
+    TABLE = 4;
+  
+    // WebSocket事件
+    WS_EVENT = 99;
+  }
+  //  WebSocket事件
+  enum WS_EVENT_ACTION{
+    // 打开连接
+    OPEN = 0;
+    // 关闭连接
+    CLOSE = 1;
+    // ping事件
+    PING = 2;
+    // PONG事件
+    PONG = 3;
+  }
+  // 用户操作
+  enum LOGIN_ACTION{
+    // 使用token登陆
+    TOKEN_LOGIN =0;
+    // 注册
+    REGISTER = 1;
+    // 登录
+    LOGIN1 = 2;
+    // 上下线，通知
+    LOGEX_PUSH = 3;
+  }
+  
+  // 用户操作
+  enum USER_ACTION{
+    // 退出
+    LOGOUT = 0;
+    // 当前用户
+    NOEUSER = 1;
+    // 修改资料
+    EDIT_INFO = 2;
+  }
+  
+  
+  // 消息动作枚举
+  enum MES_ACTION{
+    // 发送消息
+    SEND = 0;
+    // 读取消息(已读)
+    READ = 1;
+    // 获取历史消息
+    HISTORY = 2;
+    // 接受消息
+    RECEIVE = 3;
+    // recall 撤回消息
+    RECALL = 4;
+    // 接受消息成功()
+    RECEIVE_OK = 5;
+    // 读取消息成功()
+    READ_OK = 6;
+    // 消息推送(S > C)
+    PUSH = 99;
+  
+  }
+  
